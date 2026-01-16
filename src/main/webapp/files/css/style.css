@@ -1,0 +1,209 @@
+:root {
+  /* Modern Color Palette */
+  --primary-color: #5b69f9; /* Vivid Indigo */
+  --primary-hover: #4338ca;
+  --secondary-color: #f43f5e; /* Rose */
+  --dark-bg: #0f172a; /* Slate 900 */
+  --dark-surface: #1e293b; /* Slate 800 */
+  --light-text: #f8fafc; /* Slate 50 */
+  --gray-text: #94a3b8; /* Slate 400 */
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --gradient-main: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+}
+
+body {
+  font-family: "Inter", "Poppins", sans-serif;
+  color: var(--light-text);
+  background-color: var(--dark-bg);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Navbar */
+.custom_nav-container {
+  padding: 15px 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-brand span {
+  font-weight: 800;
+  font-size: 24px;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color: var(--gray-text) !important;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+  color: var(--light-text) !important;
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+/* Hero Section */
+.hero_area {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top right, #312e81 0%, transparent 40%),
+    radial-gradient(circle at bottom left, #831843 0%, transparent 40%);
+  padding-top: 80px; /* Navbar offset */
+}
+
+.detail-box h1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.detail-box p {
+  color: var(--gray-text);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn-primary-gradient {
+  background: var(--gradient-main);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6);
+  color: white;
+}
+
+.btn-secondary-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--light-text);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.btn-secondary-outline:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: white;
+}
+
+/* Sections */
+.layout_padding {
+  padding: 80px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.section-heading span {
+  color: var(--secondary-color);
+}
+
+/* Freelancer Cards */
+.freelancer-card img {
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.freelancer-card h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.freelancer-card .role {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  background: var(--dark-surface);
+  padding: 50px 0 20px;
+  border-top: 1px solid var(--glass-border);
+  margin-top: auto;
+}
+
+.footer_social a {
+  color: var(--gray-text);
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.footer_social a:hover {
+  color: var(--primary-color);
+}
