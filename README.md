@@ -1,17 +1,47 @@
-# ProjectPulse+ (Freelance Marketplace)
+# ProjectPulse+ (Sàn giao dịch việc làm tự do)
 
-ProjectPulse+ is a modern Freelance Marketplace connecting companies with top-tier talent. This application is built using Java Spring MVC, JDBC, and PostgreSQL.
+ProjectPulse+ là một ứng dụng web hiện đại kết nối các công ty với những nhân tài hàng đầu. Nó hỗ trợ toàn bộ quy trình làm việc từ đăng tuyển dụng đến nộp đề xuất, được xây dựng với hệ thống phụ trợ Java Spring MVC mạnh mẽ và giao diện người dùng JSP năng động.
 
-## Prerequisites
+## 🚀 Công nghệ sử dụng
+
+- **Backend**: Java 17, Spring MVC 6.2.8, Spring JDBC
+- **Cơ sở dữ liệu**: PostgreSQL 14+ (Driver: `org.postgresql:postgresql:42.7.6`)
+- **Frontend**: JSP (Jakarta Standard Tag Library 3.0), HTML5, CSS3 (Thiết kế Glassmorphism)
+- **Máy chủ**: Apache Tomcat 10.1.x (Jakarta EE 10 / Servlet 6.0)
+- **Công cụ xây dựng**: Apache Maven
+
+## 📋 Điều kiện tiên quyết
+
+Đảm bảo bạn đã cài đặt những thứ sau trước khi thiết lập dự án:
+
+1. **Java Development Kit (JDK)**: Phiên bản 17 trở lên.
+
+2. **Apache Maven**: Để quản lý các phụ thuộc.
+
+3. **PostgreSQL**: Máy chủ cơ sở dữ liệu quan hệ.
+4. **Apahe Tomcat**: Phiên bản 10.1.x (tương thích với Jakarta Servlet 6.0).
+
+<<<<<<< HEAD
 
 1. **Java Development Kit (JDK)**: Version 17 or higher recommended (Spring 6).
 2. **Apache Maven**: For dependency management.
 3. **PostgreSQL**: Relational database.
-4. **Tomcat Server**: Version 10.1.x or higher (Required for Jakarta EE 10 / Servlet 6.0 support). Note: `jakarta.servlet-api` 6.0.0 is used.
+4. # **Tomcat Server**: Version 10.1.x or higher (Required for Jakarta EE 10 / Servlet 6.0 support). Note: `jakarta.servlet-api` 6.0.0 is used.
 
-## Setup Instructions
+## 🛠️ Hướng dẫn cài đặt
 
-### 1. Database Setup
+### 1. Cấu hình cơ sở dữ liệu
+
+1. Khởi động máy chủ PostgreSQL của bạn.
+
+   > > > > > > > 5b4034475342b7e0f1d82352c0ccd8670a54d806
+
+2. Tạo một cơ sở dữ liệu mới có tên `...`.
+
+3. Chạy tập lệnh khởi tạo nằm tại [src/main/resources/sql/schema.sql](cci:7://file:///c:/Users/admin/Programming%20projects/Freelance-Marketplace/src/main/resources/sql/schema.sql:0:0-0:0) để tạo các bảng cần thiết (`companies`, `freelancers`, `projects`, `proposals`).
+4. **Kiểm tra kết nối**: Kiểm tra [src/main/webapp/WEB-INF/spring-servlet.xml](cci:7://file:///c:/Users/admin/Programming%20projects/Freelance-Marketplace/src/main/webapp/WEB-INF/spring-servlet.xml:0:0-0:0):
+
+<<<<<<< HEAD
 
 1. Ensure your PostgreSQL server is running.
 2. Create a new database named `Project_15`.
@@ -19,20 +49,38 @@ ProjectPulse+ is a modern Freelance Marketplace connecting companies with top-ti
 4. **Important**: Check the database connection settings in `src/main/webapp/WEB-INF/spring-servlet.xml`. By default, it expects:
    - Username: `postgres`
    - Password: `Grp4545@@`
-   - If your password differs, update line 22 of that file.
+   - # If your password differs, update line 22 of that file.
 
-### 2. Running in IntelliJ IDEA (Recommended)
+- **URL**: `jdbc:postgresql://localhost:5432/...?serverTimezone=UTC`
 
-This project contains `.smarttomcat` configuration, suggesting it is optimized for the Smart Tomcat plugin, but standard Tomcat configuration works too.
+  > > > > > > > 5b4034475342b7e0f1d82352c0ccd8670a54d806
+
+- **Tên người dùng**: `postgres` (Mặc định)
+
+- **Mật khẩu**: `Grp4545@@` (Cập nhật mật khẩu này cho phù hợp với mật khẩu PostgreSQL cục bộ của bạn)
+
+### 2. Biên dịch và Chạy
+
+#### Sử dụng IntelliJ IDEA (Khuyến nghị)
+
+Dự án này được cấu hình cho plugin **Smart Tomcat**, nhưng triển khai Tomcat tiêu chuẩn cũng hoạt động tốt.
+
+<<<<<<< HEAD
 
 1. Open the project in IntelliJ IDEA.
 2. Go to **Run -> Edit Configurations**.
 3. Add a new **Tomcat Server -> Local** configuration.
 4. In the **Deployment** tab, add the artifact: `Project_15:war exploded`.
 5. In the **Server** tab, ensure the URL is `http://localhost:8080/Project_15/`.
-6. Click **Apply** and **Run**.
+6. # Click **Apply** and **Run**.
+7. Mở dự án trong IntelliJ IDEA.
+8. Điều hướng đến **Chạy -> Chỉnh sửa cấu hình**.
 
-### 3. Usage
+   > > > > > > > 5b4034475342b7e0f1d82352c0ccd8670a54d806
+
+9. Thêm cấu hình **Máy chủ Tomcat** mới.
+
+<<<<<<< HEAD
 
 1. **Landing Page**: Navigate to `http://localhost:8080/Project_15/`.
 2. **Register**:
@@ -41,12 +89,51 @@ This project contains `.smarttomcat` configuration, suggesting it is optimized f
 3. **Workflow**:
    - Company posts a job.
    - Freelancer logs in, views the dashboard, and applies to the job.
-   - Company logs in, views their dashboard, clicks "View Proposals" to see applicants.
+   - # Company logs in, views their dashboard, clicks "View Proposals" to see applicants.
+4. **Triển khai**: Thêm artifact `...:war exploded`.
 
-## Project Structure
+   > > > > > > > 5b4034475342b7e0f1d82352c0ccd8670a54d806
 
-- `src/main/java/test/controllers`: Handles web requests (Company, Freelancer, Login).
-- `src/main/java/test/dao`: Database interactions (ProjectDao).
-- `src/main/java/test/beans`: Data models (Company, Freelancer, Project, Proposal).
-- `src/main/webapp/WEB-INF/pages`: JSP views (Frontend).
-- `src/main/webapp/files/css`: Modern styling (Glassmorphism design).
+5. **Đường dẫn ngữ cảnh**: Đảm bảo ngữ cảnh URL là `/.../`.
+
+6. Chạy máy chủ. Ứng dụng sẽ có thể truy cập được tại:
+
+`http://localhost:8080/.../`
+
+## 🌟 Tính năng
+
+### Dành cho Doanh nghiệp
+
+- **Đăng ký**: Tạo hồ sơ công ty với mô tả và trang web.
+
+- **Đăng tuyển dụng**: Đăng các dự án mới với tiêu đề, mô tả và ngân sách rõ ràng.
+
+- **Bảng điều khiển**: Xem các công việc đang hoạt động và các đề xuất đến.
+
+### Dành cho Người làm việc tự do
+
+- **Đăng ký**: Đăng ký với kỹ năng, tiểu sử và mức giá theo giờ.
+
+- **Tìm kiếm việc làm**: Duyệt các dự án có sẵn do các công ty đăng tải.
+
+- **Đề xuất**: Gửi giá thầu và thư xin việc cho các dự án.
+
+## 📂 Cấu trúc dự án
+
+```text
+src
+├── main
+│ ├── java
+│ │ └── test
+│ │ ├── beans # Mô hình dữ liệu (Công ty, Người làm tự do, Dự án, Đề xuất)
+│ │ ├── controllers # Bộ điều khiển Spring MVC (Định tuyến & Logic)
+│ │ └── dao # Đối tượng truy cập dữ liệu (Triển khai JdbcTemplate)
+│ ├── resources
+│ │ └── sql # Tập lệnh lược đồ cơ sở dữ liệu
+│ └── webapp
+│ ├── WEB-INF
+│ │ ├── pages # Các khung nhìn JSP
+│ │ └── spring-servlet.xml # Cấu hình Spring
+│ └── files
+│ └── css # Bảng định kiểu
+```
